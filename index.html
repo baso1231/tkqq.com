@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TKQQ App Store Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #38bdf8;
+            margin-bottom: 30px;
+        }
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .app-card {
+            background-color: #1e293b;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+        }
+        .app-card:hover {
+            transform: translateY(-5px);
+        }
+        .app-card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 14px;
+            object-fit: cover;
+        }
+        .app-card h3 {
+            font-size: 15px;
+            margin: 10px 0 5px 0;
+        }
+        .app-card p {
+            font-size: 12px;
+            color: #94a3b8;
+            margin: 0 0 10px 0;
+        }
+        .app-card a {
+            display: inline-block;
+            background-color: #0284c7;
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .app-card a:hover {
+            background-color: #0369a1;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>TKQQ Apps & Games</h1>
+
+    <!-- এখানে সব অ্যাপ অটোমেটিক চলে আসবে -->
+    <div class="app-grid" id="appGrid"></div>
+
+    <script>
+        // আপনার সব অ্যাপের তালিকা এখানে জমা থাকবে। 
+        // নতুন অ্যাপ আনলে শুধু নিচে নাম আর ফোল্ডারের নামটা বসিয়ে দেবেন!
+        const apps = [
+            {
+                name: "FB99 Game",
+                version: "v1.1.1",
+                folder: "fb99",
+                icon: "https://via.placeholder.com/70"
+            },
+            {
+                name: "ACE67 Game",
+                version: "v1.0.0",
+                folder: "ace67",
+                icon: "https://via.placeholder.com/70"
+            }
+            // ভবিষ্যতে নতুন অ্যাপ আসলে শুধু নিচে এভাবে কমা দিয়ে আরেকটি যোগ করে দেবেন:
+            // { name: "New Game", version: "v1.0", folder: "newfolder", icon: "https://via.placeholder.com/70" }
+        ];
+
+        const grid = document.getElementById('appGrid');
+
+        apps.forEach(app => {
+            const card = document.createElement('div');
+            card.className = 'app-card';
+            card.innerHTML = `
+                <img src="${app.icon}" alt="${app.name}">
+                <h3>${app.name}</h3>
+                <p>${app.version}</p>
+                <a href="/${app.folder}/">Install</a>
+            `;
+            grid.appendChild(card);
+        });
+    </script>
+
+</body>
+</html>
