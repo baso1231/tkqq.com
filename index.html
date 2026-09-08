@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TKQQ App Store - Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #38bdf8;
+            margin-bottom: 30px;
+        }
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .app-card {
+            background-color: #1e293b;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+        }
+        .app-card:hover {
+            transform: translateY(-5px);
+        }
+        .app-card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 14px;
+            object-fit: cover;
+        }
+        .app-card h3 {
+            font-size: 15px;
+            margin: 10px 0 5px 0;
+        }
+        .app-card p {
+            font-size: 12px;
+            color: #94a3b8;
+            margin: 0 0 10px 0;
+        }
+        .app-card a {
+            display: inline-block;
+            background-color: #0284c7;
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .app-card a:hover {
+            background-color: #0369a1;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>TKQQ Apps & Games</h1>
+
+    <div class="app-grid">
+        <!-- প্রথম অ্যাপ (FB99) -->
+        <div class="app-card">
+            <img src="https://via.placeholder.com/70" alt="FB99">
+            <h3>FB99 Game</h3>
+            <p>v1.1.1</p>
+            <a href="/fb99/">Install</a>
+        </div>
+
+        <!-- দ্বিতীয় অ্যাপ (ACE67) -->
+        <div class="app-card">
+            <img src="https://via.placeholder.com/70" alt="ACE67">
+            <h3>ACE67 Game</h3>
+            <p>v1.0.0</p>
+            <a href="/ace67/">Install</a>
+        </div>
+
+        <!-- ভবিষ্যতে যত নতুন অ্যাপ আনবেন, শুধু নিচের এই অংশটুকু কপি করে কোডে পেস্ট করে নাম ও ফোল্ডার পাল্টে দেবেন -->
+        <!-- 
+        <div class="app-card">
+            <img src="https://via.placeholder.com/70" alt="App Name">
+            <h3>New App</h3>
+            <p>v1.0.0</p>
+            <a href="/new-folder/">Install</a>
+        </div> 
+        -->
+    </div>
+
+</body>
+</html>
